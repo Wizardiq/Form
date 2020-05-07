@@ -1,0 +1,144 @@
+.personal-info {
+    margin-bottom: 100px;
+    &__title {
+        .main-title();
+    }
+    &__step {
+        .main-number()
+    }
+    &__title-text{
+        font-size: 28px;
+        color: #6e768f;
+    }
+    &__short-title {
+        font-size: 22px;
+        color: #9fa5b8;
+        margin-bottom: 40px;
+        .personal-info__sign {
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+    }
+}
+.order-form {
+    &__name {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        position: relative;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin-right: 25px;
+        position: relative;
+    }
+}
+.order-form__label{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #a5abc5;
+    margin: 0 10px 10px;
+}
+.order-form__input {
+    color: #6e768f;
+    padding: 15px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #d7d9e0;
+    width: 275px;
+}
+.order-form__input_validation{
+    &:valid:not(:placeholder-shown) {
+        background-image: url(../img/svg/check-mark.svg);
+        .main-bg();
+    }
+    &:invalid:not(:placeholder-shown) {
+        background-image: url(../img/svg/close.svg);
+        .main-bg();
+    }
+}
+.order-form__full-name {
+    width: 275px;
+}
+.order-form__number {
+    width: 275px;
+    &:not(:placeholder-shown) {
+        background-image: url(../img/svg/visa.svg); 
+        .main-bg();
+        background-size: 14%;
+    }
+}
+.order-form__code {
+    width: 70px;
+    text-align: center;
+}
+.order-form__date {
+    height: 18px;
+    width: 147px;
+}
+.order-form__input::-webkit-input-placeholder {
+    color: #6e768f;
+    font-size: 16px;
+}
+.order-form__block:last-child {
+    margin-right: 0;
+}
+@media(max-width: 992px){
+    .personal-info__title-text {
+        margin-left: 15px;
+    }
+}
+@media(max-width: 767px){
+    .personal-info__title {
+        justify-content: center;
+        &-text {
+            font-size: 18px;
+        }
+    }
+    .personal-info__short-title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .order-form__name {
+        align-items: center;
+    }
+    .order-form__item {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .order-form__block {
+        margin-bottom: 25px;
+        margin-right: 0;
+    }
+}
+@media(max-width: 425px){
+    .order-form__label {
+        font-size: 14px;
+    }
+}
+@media(max-width: 375px){
+    .order-form__input{
+        width: 225px;
+    }
+    .order-form__code {
+        width: 70px;
+    }
+    .order-form__date {
+        width: 147px;
+    }
+    .personal-info__short-title .personal-info__sign{
+        display: block;
+        margin: 0;
+    }
+
+}
+

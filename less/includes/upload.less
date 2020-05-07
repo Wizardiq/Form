@@ -1,0 +1,206 @@
+.upload {
+    margin-bottom: 100px;
+    &__block {
+        display: flex;
+        align-items: center
+    }
+    &__step {
+        .main-number();
+    }
+    &__title {
+       display: flex;
+       align-items: center;
+       &-text {
+        font-size: 28px;
+        color: #6e768f; 
+       }
+    }
+}
+
+.upload__types {
+    font-size: 25px;
+    color: #9fa5b8;
+    margin-left: 15px;
+}
+.upload__btn {
+    display: inline-block;
+    margin: 30px 0;
+    .upload__input {
+        display: none;
+    }
+}
+.upload__item {
+    font-size: 18px;
+    background-color: #f7f7fa;
+    color: #6e768f;
+    padding: 15px 30px;
+    border: 1px solid #a5abc5;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    &:active {
+        box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+    }
+}
+.upload__about {
+    display: inline-block;
+    color: #7f86a5;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.fa-download {
+    margin-right: 10px;
+}
+.upload__info {
+    background-color: #ffffff;
+    color: #a5abc5;
+    font-size: 16px;
+    border: 1px solid #a5abc5;
+    border-radius: 5px;
+}
+.info-title {
+    display: flex;
+    &__child {
+        font-weight: 500;
+        font-size: 18px;
+        text-transform: uppercase;
+        width: 300px;
+        padding: 20px 0 20px 60px;
+        &:last-of-type {
+            text-align: center;
+        }
+    }
+}
+.info-items {
+    display: flex;
+    &__child {
+        width: 300px;
+        padding: 20px 0 20px 60px;
+        &:last-of-type {
+            text-align: center;
+        }
+    }
+}
+.info-items__child:nth-child(1):hover {
+    color: #655390;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.fa-trash{
+    cursor: pointer;
+    &:hover {
+        color: #776ad6;
+    }
+}
+.fa-file {
+    margin-right: 5px;
+}
+.info-items_hidden {
+    display: none;
+}
+.file__name {
+  word-break: break-all;
+}
+@media(max-width: 1230px){
+    .info-title__child:nth-child(2) {
+        text-align: center;
+    }
+    .info-title__child:nth-child(3) {
+        min-width: 170px;
+    }
+    .info-items__child:nth-child(1){
+        min-width: 195px;
+    }
+}
+@media(max-width: 992px){
+    .info-title__child,
+    .info-items__child {
+        padding: 20px 0 20px 30px;
+    }
+    .info-title__child:nth-child(2) {
+        text-align: right;
+    }
+    .upload__title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .upload__block {
+        margin-bottom: 15px;
+    }
+    .upload__types {
+        margin: 0;
+    }
+    .upload__title-text {
+        margin-left: 15px;
+    }
+}
+@media(max-width:767px){
+    .upload__title {
+        align-items: center;
+    }
+    .upload__btn {
+        display: flex;
+        justify-content: center;
+    }
+    .upload__about {
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+        margin-left: 0;
+    }
+    .info-title {
+        display: none;
+    }
+    .info-items {
+        display: block;
+        margin: 20px 30px;
+    }
+    .info-items_hidden {
+        display: none;
+    }
+    .upload__title-text {
+        font-size: 18px;
+    }
+    .upload__types {
+        font-size: 16px;
+    }
+    .info-items__child {
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 36%;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+    .info-items__child:nth-child(1):before {
+        .upload-titles();
+        content: 'File name';
+    }
+    .info-items__child:nth-child(2):before {
+        .upload-titles();
+        content: 'File size';
+    }
+    .info-items__child:nth-child(3):before {
+        .upload-titles();
+        content: 'Number of words';
+    }
+    .info-items__child:nth-child(4):before {
+        .upload-titles();
+        content: 'Remove';
+    }
+
+}
+@media(max-width: 425px){
+    .info-items {
+        margin: 20px 10px;
+    }
+}
+
+@media(max-width:375px){
+    .info-items__child {
+        .fa-file {
+            display: none;
+        }
+    }
+}

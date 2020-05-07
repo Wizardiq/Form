@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <img class="main-logo" src="img/logo.png" alt="">
+        <form class="main-form"  action="" method="">
+            <header class="header">
+                        <div class="header__preview">
+                            <div class="order-items">
+                                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                                        <h3 class="title-item">Your order</h3>
+                                <ul class="order-items__list">
+                                    <li class="list-item">
+                                       <div class="list-item__title">items</div>
+                                       <div class="list-item__value">2 documents</div>
+                                    </li>
+                                    <li class="list-item">
+                                       <div class="list-item__title">details</div>
+                                       <div class="list-item__value">2 languages</div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="list-item__title">price</div>
+                                        <div class="list-item__value">$ 696.06</div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="list-item__title">delivery</div>
+                                        <div class="list-item__value">48 hours*</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="order-buttons">
+                                <button class="order-buttons__place">
+                                    <p> place order</p>
+                                </button>
+                                <button class="order-buttons__print">
+                                    <p> print a quote</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header__contacts">
+                            <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            <h3 class="contacts-title">help center</h3>
+                            <p class="contacts-info">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+                            <div class="contacts-items">
+                                <div class="contacts-items__phone">
+                                    +971 (0) 555 555
+                                </div>
+                                <div class="contacts-items__mail">
+                                    help@qtest.com
+                                </div>
+                            </div>
+                        </div>
+            </header>
+            <main class="main">
+                <section class="select">
+                    <div class="container">
+                        <h1 class="select__title">
+                            Select what you want to translate
+                        </h1>
+                        <fieldset>
+                            <div class="select__block">
+                                <input name="select" class="select__input" id="select-page" type="radio" >
+                                <label  class="select__item" for="select-page">
+                                        <img class="select__img" src="img/web-page.png" alt="">
+                                        <div class="select__text">Website</div>
+                                </label>
+                                    <input name="select" class="select__input" id="select-document"type="radio" checked>
+                                    <label class="select__item select__item_position" for="select-document">
+                                        <img class="select__img" src="img/document.png" alt="">
+                                        <div class="select__text">Documents</div>
+                                    </label>
+                                    <input name="select" class="select__input" id="select-element"type="radio">
+                                    <label class="select__item" for="select-element">
+                                        <img class="select__img" src="img/social.png" alt="">
+                                        <div class="select__text">Social Account</div>
+                                    </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+                <section class="upload">  
+                    <div class="container">
+                        <div class="upload__title">
+                            <div class="upload__block">
+                                <div class="upload__step">1</div>
+                                <div class="upload__title-text">Upload your documents</div>
+                            </div>
+                            <span class="upload__types">(Doc, Docx, Text, PDF, Markdown)</span>
+                        </div>
+                        <div class="upload__btn">
+                            <input name="files" class="upload__input" id="upload-btn" type="file" multiple>
+                            <label class="upload__item" for="upload-btn">
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                                Upload a new file
+                            </label>
+                        </div>
+                        <div class="upload__about">  
+
+                        </div>
+                        <div class="upload__info">
+                                <div class="info-title">
+                                    <div class="info-title__child">File name</div>
+                                    <div class="info-title__child">File size</div>
+                                    <div class="info-title__child">Number of words</div>
+                                    <div class="info-title__child">Remove</div>
+                                </div>
+                                <div id="files-block">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="translate">
+                    <div class="container">
+                        <div class="translate__title">
+                            <div class="translate__step">2</div>
+                            <div class="translate__title-text">Choose your languages pairings</div>
+                        </div>
+                            <div class="translate__block">
+                                <div class="translate__item">
+                                    <span class="translate__item-title">From</span>
+                                    <select name="translate-from" id="translate-first" class="translate__select">
+                                        <option value="English">English</option>
+                                        <option value="German">German</option>
+                                        <option value="Russian">Russian</option>
+                                        <option value="Ukrainian">Ukrainian</option>
+                                    </select>
+                                </div>
+                                <div class="translate__item">
+                                    <span class="translate__item-title">To</span>
+                                    <select name="translate-to" id="translate-sec" class="translate__select">
+                                        <option value="Choose" > Choose language</option>
+                                        <option value="English">English</option>
+                                        <option value="German">German</option>
+                                        <option value="Russian">Russian</option>
+                                        <option value="Ukrainian">Ukrainian</option>
+                                    </select>
+                                </div>
+                            </div>
+                     </div>
+                </section>
+                <section class="settings">
+                    <div class="container">
+                        <div class="settings__design">
+                            <div class="design__title">
+                                <div class="design__step">3</div>
+                                <div class="design__title-text">Select your desired tone</div>
+                            </div>
+                            <fieldset>
+                                <div class="design__block">
+                                    <input name="design" class="design__input" id="design-casual" type="radio">
+                                    <label  class="design__item" for="design-casual">
+                                        <i class="fas fa-comments"></i>
+                                        Friendly / Casual
+                                    </label>
+                                    <input name="design" class="design__input" id="select-pro"type="radio" checked>
+                                    <label class="design__item design__item_position" for="select-pro">
+                                        <i class="fas fa-user-tie"></i>
+                                        Corporate / Pro
+                                    </label>
+                                    <input name="design" class="design__input" id="select-formal"type="radio">
+                                    <label class="design__item" for="select-formal">
+                                        <i class="fas fa-bullhorn"></i>
+                                        Media / Formal
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="settings__timeline">
+                            <div class="timeline__title">
+                                <div class="timeline__step">4</div>
+                                <div class="timeline__title-text">Tell us how urgent this job is</div>
+                            </div>
+                            <div class="timeline__block">
+                                <input class="timeline__input" type="range" id="timeline" name="timeline"
+                                min="0" max="2" step="1" value="1" list="tickmarks">
+                                <datalist class="timeline__values" id="tickmarks">
+                                    <option class="timeline__item" value="0" label="I got time"></option>
+                                    <option class="timeline__item" value="1" label="Average"></option>
+                                    <option class="timeline__item" value="2" label="Yesterday"></option>
+                                </datalist>   
+                            </div>
+                            <div class="timeline__info timeline__info_hidden" range-value="0">
+                                <i class="fas fa-info-circle fa-lg"></i>
+                                <h3 class="info__title">Timeline info</h3>
+                                <p class="info__text">With an <span class="info__span">Got time </span>timeline set up, our expert translator can take a reasonable amount of time perfecting your translation.</p>
+                            </div>
+                            <div class="timeline__info " range-value="1">
+                                <i class="fas fa-info-circle fa-lg"></i>
+                                <h3 class="info__title">Timeline info</h3>
+                                <p class="info__text">With an <span class="info__span">Average </span>timeline set up, you will get the best translation.</p>
+                            </div>
+                            <div class="timeline__info timeline__info_hidden"range-value="2">
+                                <i class="fas fa-info-circle fa-lg"></i>
+                                <h3 class="info__title">Timeline info</h3>
+                                <p class="info__text">With an <span class="info__span">Yesterday</span> timeline set up,we will do our best to make translation as soon as possible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="personal-info">
+                    <div class="container">
+                        <div class="personal-info__title">
+                            <div class="personal-info__step">5</div>
+                            <div class="personal-info__title-text">Sign up and choose a payment method</div> 
+                        </div>
+                        <h2 class="personal-info__short-title">
+                            Already have an account with us?<span class="personal-info__sign">Sign in</span>
+                        </h2>
+                        <fieldset>
+                            <div class="order-form">
+                                <div class="order-form__name">
+                                    <label class="order-form__label" for="name">Full name</label>
+                                    <input class="order-form__input  order-form__full-name order-form__input_validation"  type="text" id="name" name="user_name" required  minlength = "8" maxlength="32" pattern="[A-Za-z]{8,32}" placeholder=" " title="Minimum 8 letters">
+                                </div>
+                                <div class="order-form__item">
+                                    <div class="order-form__block">
+                                        <label class="order-form__label" for="mail">Email adress</label>
+                                        <input class="order-form__input order-form__mail order-form__input_validation" size="30" type="email" id="mail" name="user_mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder=" " title="name@domain.etc">
+                                    </div>
+                                    <div class="order-form__block">
+                                        <label class="order-form__label" for="password">Choose a password</label>
+                                        <input class="order-form__input  order-form__password order-form__input_validation" size="30" type="password" id="password" name="user_password" required minlength = "8" pattern="[A-Za-z0-9]{8}+$" placeholder=" " title="Minimum 8 characters">
+                                    </div>
+                                </div>
+                                <div class="order-form__item">
+                                    <div class="order-form__block">
+                                        <label class="order-form__label" for="number">Card number</label>
+                                        <input class="order-form__input  order-form__number" type="text" id="number" name="user_cardNumber"  maxlength = "19" required pattern="[0-9]{16, 19}" placeholder=" ">
+                                    </div>
+                                    <div class="order-form__block">
+                                        <label class="order-form__label" for="date">Expiry date</label>
+                                        <input size="10" class="order-form__input  order-form__date" type="date" id="date" name="user_expiryDate" required>
+                                    </div>
+                                    <div class="order-form__block">
+                                        <label class="order-form__label" for="code">Code</label>
+                                        <input  class="order-form__input order-form__code" type="text" id="code" name="user_code" required pattern="[0-9]{3}" minlength = "3" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__terms">
+                        <input class="footer__input" type="checkbox" id="terms" name="terms"
+                        checked>
+                        <label class="terms-input" for="terms">I agree to the <span class="terms-item">Terms & Conditions</span></label>
+                    </div>
+                    <button type="submit" class="footer-buttons__place">
+                        <p> place order</p>
+                    </button>
+                    <button class="footer-buttons__print">
+                        <p> print a quote</p>
+                    </button>
+                </div>
+            </footer>
+        </form>
+    </div>
+    <script async src="js/main.js"></script>
+</body>
+</html>
